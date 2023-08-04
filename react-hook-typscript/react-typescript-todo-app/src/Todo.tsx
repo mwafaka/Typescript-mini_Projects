@@ -1,18 +1,19 @@
 // src/components/Todo.tsx
 
-
 interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
-
-interface TodoProps {
-  todo: Todo;
+  todo:{
+    id: number;
+    text: string;
+    completed: boolean;
+  }
   toggleTodo: (id: number) => void;
 }
 
-const Todo: React.FC<TodoProps> = ({ todo, toggleTodo }) => {
+// interface TodoProps {
+//   todo: Todo;
+// }
+
+const Todo: React.FC<Todo> = ({ todo, toggleTodo }) => {
   return (
     <li>
       <input

@@ -10,7 +10,7 @@ interface Todo {
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState<string>("");
 
   const addTodo = () => {
     if (inputText.trim() !== "") {
